@@ -32,6 +32,20 @@ echoColor() {
     echo -e $COLORED_STRING
 }
 
+usage() {
+    echo -e "Usage: psm [OPTIONS]"
+    echo
+    echoColor $ORANGE "=== OPTIONS ===="
+    echo -e " -s start\tStarts the server"
+    echo
+    echoColor $ORANGE "=== COLORS ==="
+    echo -e "Each color represents a different program log level."
+    echo -e "Please see below for the color to log level associations."
+    echoColor $GREEN "Green - Success"
+    echoColor $CYAN "Cyan - Info"
+    echoColor $RED "Red - Error"
+}
+
 # $1 = Server root
 echoStartHeader() {
     echo ""
